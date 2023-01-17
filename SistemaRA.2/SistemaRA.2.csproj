@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A09A490-654F-4325-AC39-FA1699ADF3BE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SistemaRA</RootNamespace>
+    <AssemblyName>SistemaRA</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\corre\OneDrive\Documents\Sistemas RA\Instalador\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Iconoap.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8E91B75B2FA021CFCDC6C612B8BCC0DA3FA037A3</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SistemaRA.2_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\OneDrive\Documents\Sistemas RA\BaseDeDatos\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Npgsql, Version=3.2.6.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.6\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\conexion.cs" />
+    <Compile Include="Datos\fcompras.cs" />
+    <Compile Include="Datos\fmermas.cs" />
+    <Compile Include="Datos\fproductos.cs" />
+    <Compile Include="Datos\fmain.cs" />
+    <Compile Include="Datos\fRegSep.cs" />
+    <Compile Include="Datos\fRepInv.cs" />
+    <Compile Include="Datos\frepven.cs" />
+    <Compile Include="Datos\fusuarios.cs" />
+    <Compile Include="Datos\fventas.cs" />
+    <Compile Include="Datos\ReporteMermas.cs" />
+    <Compile Include="Datos\Seguridad.cs" />
+    <Compile Include="Datos\validar.cs" />
+    <Compile Include="frm\frmCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmCompras.Designer.cs">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmMainA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmMainA.Designer.cs">
+      <DependentUpon>frmMainA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmMainE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmMainE.Designer.cs">
+      <DependentUpon>frmMainE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reportes\frmMainR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Reportes\frmMainR.Designer.cs">
+      <DependentUpon>frmMainR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reportes\FrmReporteInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Reportes\FrmReporteInventario.Designer.cs">
+      <DependentUpon>FrmReporteInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reportes\frmRepVen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Reportes\frmRepVen.Designer.cs">
+      <DependentUpon>frmRepVen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reportes\frmReporteMermas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Reportes\frmReporteMermas.designer.cs">
+      <DependentUpon>frmReporteMermas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Separado\RegistrarSeparado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Separado\RegistrarSeparado.designer.cs">
+      <DependentUpon>RegistrarSeparado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Separado\Separados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Separado\Separados.designer.cs">
+      <DependentUpon>Separados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Ventas\frmTPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Ventas\frmTPago.Designer.cs">
+      <DependentUpon>frmTPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Ventas\frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Ventas\frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmMermas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmMermas.designer.cs">
+      <DependentUpon>frmMermas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Productos\frmMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Productos\frmMarca.Designer.cs">
+      <DependentUpon>frmMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Productos\frmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Productos\frmProductos.Designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm\frmCompras.resx">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmMainA.resx">
+      <DependentUpon>frmMainA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmMainE.resx">
+      <DependentUpon>frmMainE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Reportes\frmMainR.resx">
+      <DependentUpon>frmMainR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Reportes\FrmReporteInventario.resx">
+      <DependentUpon>FrmReporteInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Reportes\frmRepVen.resx">
+      <DependentUpon>frmRepVen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Reportes\frmReporteMermas.resx">
+      <DependentUpon>frmReporteMermas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Separado\RegistrarSeparado.resx">
+      <DependentUpon>RegistrarSeparado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Separado\Separados.resx">
+      <DependentUpon>Separados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Ventas\frmTPago.resx">
+      <DependentUpon>frmTPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Ventas\frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmMermas.resx">
+      <DependentUpon>frmMermas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Productos\frmMarca.resx">
+      <DependentUpon>frmMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Productos\frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Imagenes\Botones\IconsLogin.rar" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SistemaRA.2_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Iconoap.ico" />
+    <Content Include="Imagenes\Botones\actualizar.png" />
+    <Content Include="Imagenes\Botones\arrows.png" />
+    <Content Include="Imagenes\Botones\Bonotes\cupon.png" />
+    <Content Include="Imagenes\Botones\Bonotes\nota.png" />
+    <Content Include="Imagenes\Botones\Bonotes\perdidas.png" />
+    <Content Include="Imagenes\Botones\Bonotes\puntuacion.png" />
+    <Content Include="Imagenes\Botones\Bonotes\regalo %281%29.png" />
+    <Content Include="Imagenes\Botones\Bonotes\tienda-online.png" />
+    <Content Include="Imagenes\Botones\Bonotes\usuario.png" />
+    <Content Include="Imagenes\Botones\BtnBusqueda.png" />
+    <Content Include="Imagenes\Botones\cancelar.png" />
+    <Content Include="Imagenes\Botones\cerrar-sesion %281%29.png" />
+    <Content Include="Imagenes\Botones\cerrar-sesion.png" />
+    <Content Include="Imagenes\Botones\Clientes.png" />
+    <Content Include="Imagenes\Botones\Close_Icon.png" />
+    <Content Include="Imagenes\Botones\comprobar.png" />
+    <Content Include="Imagenes\Botones\cross.png" />
+    <Content Include="Imagenes\Botones\cupon.png" />
+    <Content Include="Imagenes\Botones\decrease.png" />
+    <Content Include="Imagenes\Botones\efectivo.png" />
+    <Content Include="Imagenes\Botones\IconM.png" />
+    <Content Include="Imagenes\Botones\IconM2.png" />
+    <Content Include="Imagenes\Botones\IconM3.png" />
+    <Content Include="Imagenes\Botones\Icono.png" />
+    <Content Include="Imagenes\Botones\Icono2.png" />
+    <Content Include="Imagenes\Botones\Icono3.png" />
+    <Content Include="Imagenes\Botones\Icono4.png" />
+    <Content Include="Imagenes\Botones\Iconoap.ico" />
+    <Content Include="Imagenes\Botones\Iconsolo.png" />
+    <Content Include="Imagenes\Botones\imagen.png" />
+    <Content Include="Imagenes\Botones\invoice.png" />
+    <Content Include="Imagenes\Botones\line %281%29.png" />
+    <Content Include="Imagenes\Botones\line.png" />
+    <Content Include="Imagenes\Botones\Logotipo-regalos-alejandra.gif" />
+    <Content Include="Imagenes\Botones\Logotipo-regalos-alejandra.jpg" />
+    <Content Include="Imagenes\Botones\Logotipo-regalos-alejandra.png" />
+    <Content Include="Imagenes\Botones\magnifying-glass.png" />
+    <Content Include="Imagenes\Botones\menu.png" />
+    <Content Include="Imagenes\Botones\menuRosa.png" />
+    <Content Include="Imagenes\Botones\menuRosaOv.png" />
+    <Content Include="Imagenes\Botones\menuRosaOv2.png" />
+    <Content Include="Imagenes\Botones\minimizar.png" />
+    <Content Include="Imagenes\Botones\Minimize_Icon.png" />
+    <Content Include="Imagenes\Botones\Mobile-Menu-Icon.png" />
+    <Content Include="Imagenes\Botones\nota.png" />
+    <Content Include="Imagenes\Botones\perdidas.png" />
+    <Content Include="Imagenes\Botones\puntuacion.png" />
+    <Content Include="Imagenes\Botones\qr-code.png" />
+    <Content Include="Imagenes\Botones\recordatorio.png" />
+    <Content Include="Imagenes\Botones\redimensionar.png" />
+    <Content Include="Imagenes\Botones\regalo %281%29.png" />
+    <Content Include="Imagenes\Botones\regalo-supermercado.png" />
+    <Content Include="Imagenes\Botones\regalo.png" />
+    <Content Include="Imagenes\Botones\restaurar.png" />
+    <Content Include="Imagenes\Botones\sales.png" />
+    <Content Include="Imagenes\Botones\signs.png" />
+    <Content Include="Imagenes\Botones\tarjeta-de-credito.png" />
+    <Content Include="Imagenes\Botones\tienda-online.png" />
+    <Content Include="Imagenes\Botones\Titulo.png" />
+    <Content Include="Imagenes\Botones\usuario.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
