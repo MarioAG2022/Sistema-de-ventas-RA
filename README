@@ -1,0 +1,4 @@
+Este es un proyecto llevado acabo con c# contiene tambien un respaldo de la Base de datos llamada DB_backup
+para la realizacion de este proyecto se utilizo la base de datos postgresql asi antes de poder usar el codigo 
+se tiene que crear la base de datos en postgresql tambien se tiene que cambiar la relacion en el codigo 
+dependiendo de tu usuario que asignaste en postgres y contraseña 
